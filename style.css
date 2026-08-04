@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#hero {
+    background: #6E4EE6;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 60px;
+    height: 70px;
+}
+
+#hero .hero-logo img {
+    width: 60px;
+    height: 75px;
+    top: 0.56px;
+    color: #ffc700;
+    border: 16px;
+    padding: 16px 8px;
+}
+
+.hero-navbar {
+    justify-content: center;
+}
+
+
+#hero .hero-navbar a {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #F1EDFD;
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+#hero .hero-navbar a:hover {
+    background: white;
+    color: #6E4EE6;
+    font-weight: 700;
+    border-radius: 999px;
+}
+
+#hero .hero-navbar a {
+    margin: 7px;
+    font-weight: 500;
+}
