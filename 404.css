@@ -66,36 +66,17 @@ body {
     border-radius: 8px;
     font-size: 13px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 /* BUTTON HOVER */
 .home-btn:hover {
-    color: #ffd84c;
-    background: #5d3cdb;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 200, 0, 0.2);
+    color: #6E4EE6;
+    background: white;
+    border: 1px solid #6E4EE6;
 }
 
 /* ARROW */
 .home-btn span {
     font-size: 13px;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-
-    .error-number {
-        font-size: 150px;
-        margin-bottom: 25px;
-    }
-
-    .error-page h1 {
-        font-size: 30px;
-    }
-
-    .error-page p {
-        font-size: 14px;
-        max-width: 300px;
-    }
 }
