@@ -453,7 +453,7 @@ body {
 
 /* INDIVIDUAL CARDS */
 
-.review-cards>div {
+.review-cards > div {
     flex-shrink: 0;
     width: 330px;
     min-height: 135px;
@@ -465,6 +465,9 @@ body {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     margin-left: 33px;
     align-items: center;
+    p {
+        font-size: 10px;
+    }
 }
 
 .review-cards .review-card5 {
@@ -650,6 +653,7 @@ body {
 footer {
     position: relative;
     width: 100%;
+    height: 530px;
     min-height: 470px;
     background: #6E4EE6;
     padding: 120px 20px 40px;
@@ -738,4 +742,23 @@ footer {
     resize: none;
     padding: 10px 8px;
     font-size: 15px;
+}
+
+/* COPYRIGHT */
+
+footer .copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.08);
+    color: white;
+    font-family: Quicksand, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
 }
