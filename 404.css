@@ -13,14 +13,11 @@ body {
 /* MAIN PAGE */
 .error-page {
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
     padding: 30px;
 }
 
@@ -34,13 +31,16 @@ body {
     outline: 1px solid #a5afc0;
 }
 
+.error-page .error-number .num-0 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 /* HEADING */
 .error-page h1 {
     font-size: 38px;
     font-weight: 700;
-
     color: #363d49;
-
     margin-bottom: 8px;
 }
 
@@ -79,4 +79,73 @@ body {
 /* ARROW */
 .home-btn span {
     font-size: 13px;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+
+/* iPad */
+
+@media (max-width: 769px) {
+    .error-page .error-number {
+        width: 80%;
+        flex-wrap: nowrap;
+    }
+
+    .error-page .error-number img {
+        width: 25%;
+        height: 200px;
+    }
+
+    .error-page .error-number .num-0 {
+        width: 25%;
+        height: 200px;
+    }
+}
+
+/* iPhone X */
+
+@media (max-width: 376px) {
+
+    .error-page {
+        padding: 20px 12px;
+    }
+
+    .error-page .error-number {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .error-page .error-number img {
+        width: 25%;
+        height: 135px;
+    }
+
+    .error-page .error-number .num-0 {
+        width: 25%;
+    }
+
+    .error-page .error-number img:first-child {
+        margin-right: -10px;
+    }
+
+    .error-page .error-number img:last-child {
+        margin-left: -10px;
+    }
+
+    .error-page h1 {
+        font-size: 26px;
+    }
+
+    .error-page p {
+        max-width: 280px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .home-btn {
+        padding: 9px 14px;
+        font-size: 12px;
+    }
 }

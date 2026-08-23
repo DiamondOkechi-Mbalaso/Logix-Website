@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Logix Website</title>
 </head>
 
@@ -13,14 +14,25 @@
     NAVBAR
     --------------------------->
     <div class="navbar">
-        <div class="hero-logo">
+        <div class="navbar-logo">
             <img src="img/logo 1.png" alt="Logix Logo">
         </div>
 
-        <a href="index.html">Home</a>
-        <a href="404.html">Services</a>
-        <a href="404.html">About</a>
-        <a href="404.html">Contact</a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="404.html">Services</a>
+            <a href="404.html">About</a>
+            <a href="404.html">Contact</a>
+            
+            <div class="close-icon">
+                <a href="#" id="closeIcon"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+        </div>
+
+
+        <div class="menu-icon">
+            <i id="menuIcon" class="fa-solid fa-bars"></i>
+        </div>
     </div>
 
     <!--------------------------
@@ -51,6 +63,8 @@
             <div class="line-1"></div>
             <div class="line-2"></div>
             <div class="line-3"></div>
+            <div class="line-4"></div>
+            <div class="line-5"></div>
         </div>
     </div>
 
@@ -215,15 +229,17 @@
     <footer>
         <div class="footer-text">
             <h2>Get in touch</h2>
-            
-            <p>Have a question for us? Maybe some feedback? We love talking to users about Logix, and we're happy to answer questions about our pricing, roadmap, or business solutions. Send us a note and we'll get back to you as soon as possible.</p>
+
+            <p>Have a question for us? Maybe some feedback? We love talking to users about Logix, and we're happy to
+                answer questions about our pricing, roadmap, or business solutions. Send us a note and we'll get back to
+                you as soon as possible.</p>
         </div>
 
         <div class="footer-form">
             <input type="text" placeholder="First Name">
 
             <input type="text" placeholder="Last Name">
-            
+
             <input type="text" placeholder="Email Address">
 
             <textarea placeholder="Message"></textarea>
@@ -231,6 +247,7 @@
 
         <p class="copyright">© 2026 Logix. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
