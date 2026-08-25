@@ -1,15 +1,15 @@
-const menuIcon = document.getElementById('menuIcon');
-const closeIcon = document.getElementById('closeIcon');
-const navbar = document.getElementById('nav-links');
+const menuIcon = document.querySelector('.menu-icon');
+const closeIcon = document.querySelector('.close-icon');
+const navLinks = document.querySelector('.nav-links');
 
 if (menuIcon) {
     menuIcon.addEventListener('click', () => {
-        navbar.classList.add('active');
-    })
+        navLinks.classList.add('active');
+    });
 }
 
 if (closeIcon) {
     closeIcon.addEventListener('click', () => {
-        navbar.classList.remove('active');
-    })
+        navLinks.classList.remove('active');
+    });
 }

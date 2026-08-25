@@ -100,7 +100,7 @@ body {
 
     .error-page .error-number .num-0 {
         width: 25%;
-        height: 200px;
+        height: 200px !important;
     }
 }
 
