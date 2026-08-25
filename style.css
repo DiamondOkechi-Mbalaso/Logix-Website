@@ -10,6 +10,10 @@ body {
     background: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* =========================
    NAVBAR
 ========================= */
@@ -34,6 +38,21 @@ body {
 .navbar .nav-links {
     position: absolute;
     top: -15px;
+}
+
+.navbar .nav-links .active {
+    color: #FFC700;
+    font-weight: bold;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    transition: border-color 0.3s ease;
+}
+
+.navbar .nav-links .active:hover {
+    background: #6E4EE6;
+    color: #FFC700;
+    font-weight: bolder;
+    border-color: #FFC700;
 }
 
 /* LOGO */
@@ -61,7 +80,7 @@ body {
     font-family: Quicksand, sans-serif;
     font-size: 16px;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 /* NAVBAR MENU ICON */
@@ -367,6 +386,7 @@ body {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 /* MAIN HEADER */
@@ -672,21 +692,44 @@ body {
 .newsletter-form button {
     width: 101px;
     height: 40px;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 6px;
+    transition: border-color 0.3s ease;
     background: #6E4EE6;
-    color: white;
     font-family: Quicksand, sans-serif;
     font-size: 11px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.5s ease;
+    a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.5s ease;
+    }
 }
 
 .newsletter-form button:hover {
-    color: #6E4EE6;
     background: white;
-    border: 1px solid #6E4EE6;
+    /* border: 1px solid #6E4EE6; */
+    border-color: #6E4EE6;
+    a {
+        color: #6E4EE6;
+    }
+}
+
+.navbar .nav-links .active {
+    color: #FFC700;
+    font-weight: bold;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    transition: border-color 0.3s ease;
+}
+
+.navbar .nav-links .active:hover {
+    background: #6E4EE6;
+    color: #FFC700;
+    font-weight: bolder;
+    border-color: #FFC700;
 }
 
 /* =========================
@@ -1273,7 +1316,7 @@ footer .copyright {
         position: absolute;
         align-self: flex-end;
         width: 25%;
-        top: 3468px;
+        top: 3498px;
     }
 
     /* =========================
