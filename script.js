@@ -28,34 +28,75 @@ navItems.forEach(link => {
     });
 });
 
-
 // =========================
 // ACTIVE NAV LINK ON SCROLL
 // =========================
 
-const sections = document.querySelectorAll('#hero, #services, #intro, #footer');
+const sections = [
+    {
+        id: 'hero',
+        link: '#hero'
+    },
+    {
+        id: 'services',
+        link: '#services'
+    },
+    {
+        id: 'intro',
+        link: '#intro'
+    },
+    {
+        id: 'review',
+        link: '#intro'
+    },
+    {
+        id: 'newsletter',
+        link: '#intro'
+    },
+    {
+        id: 'footer',
+        link: '#footer'
+    }
+];
+
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-
             navItems.forEach(link => {
                 link.classList.remove('active');
             });
 
-            const activeLink = document.querySelector(
-                `.nav-links a[href="#${entry.target.id}"]`
+            const section = sections.find(
+                section => section.id === entry.target.id
             );
 
-            if (activeLink) {
-                activeLink.classList.add('active');
+
+            if (section) {
+
+                const activeLink = document.querySelector(
+                    `.nav-links a[href="${section.link}"]`
+                );
+
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
             }
         }
     });
+
 }, {
     threshold: 0.4
 });
 
+
+
 sections.forEach(section => {
-    observer.observe(section);
+
+    const element = document.getElementById(section.id);
+
+    if (element) {
+        observer.observe(element);
+    }
+
 });

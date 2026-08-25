@@ -14,6 +14,18 @@ html {
     scroll-behavior: smooth;
 }
 
+#hero {
+    scroll-margin-top: 90px;
+}
+
+#services {
+    scroll-margin-top: 50px;
+}
+
+#intro {
+    scroll-margin-top: 80px;
+}
+
 /* =========================
    NAVBAR
 ========================= */
@@ -40,20 +52,73 @@ html {
     top: -15px;
 }
 
-.navbar .nav-links .active {
-    color: #FFC700;
-    font-weight: bold;
+.navbar .nav-links a {
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 7px;
+    top: 20px;
+    text-decoration: none;
+    color: #F1EDFD;
+    font-family: Quicksand, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
     border: 3px solid transparent;
     border-radius: 999px;
-    transition: border-color 0.3s ease;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.navbar .nav-links .active:hover {
+
+/* NAVBAR TEXT */
+
+.navbar .nav-links a span {
+    display: inline-block;
+    transition:
+        transform 0.3s ease,
+        font-weight 0.3s ease;
+}
+
+
+/* NORMAL HOVER */
+
+.navbar .nav-links a:hover {
+    background: #FFC700;
+    color: white;
+    font-weight: 700;
+    border-radius: 999px;
+}
+
+
+/* ACTIVE LINK */
+
+.navbar .nav-links a.active {
+    color: #FFC700;
+    font-weight: bold;
+    border-color: transparent;
+}
+
+
+/* ACTIVE HOVER */
+
+.navbar .nav-links a.active:hover {
     background: #6E4EE6;
     color: #FFC700;
     font-weight: bolder;
     border-color: #FFC700;
 }
+
+
+/* MAKE ONLY THE TEXT GROW */
+
+.navbar .nav-links a.active:hover span {
+    transform: scale(1.1);
+}
+
 
 /* LOGO */
 .navbar .navbar-logo {
@@ -89,7 +154,7 @@ html {
 }
 
 /* NAVBAR CLOSE ICON */
-.navbar .nav-links .close-icon a {
+.navbar .nav-links .close-icon i {
     display: none;
 }
 
@@ -701,6 +766,7 @@ html {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.5s ease;
+
     a {
         text-decoration: none;
         color: white;
@@ -712,25 +778,12 @@ html {
     background: white;
     /* border: 1px solid #6E4EE6; */
     border-color: #6E4EE6;
+
     a {
         color: #6E4EE6;
     }
 }
 
-.navbar .nav-links .active {
-    color: #FFC700;
-    font-weight: bold;
-    border: 3px solid transparent;
-    border-radius: 999px;
-    transition: border-color 0.3s ease;
-}
-
-.navbar .nav-links .active:hover {
-    background: #6E4EE6;
-    color: #FFC700;
-    font-weight: bolder;
-    border-color: #FFC700;
-}
 
 /* =========================
    FOOTER
@@ -856,6 +909,7 @@ footer .copyright {
 
 /* iPad */
 @media (max-width: 769px) {
+
     /* =========================
         NAVBAR
     ========================= */
@@ -1010,23 +1064,8 @@ footer .copyright {
 
 }
 
-/* iPhone X */
 
-@media (max-width: 376px) {
-    /* =========================
-        NAVBAR
-    ========================= */
-
-    .navbar {
-        padding: 0 30px;
-        position: fixed;
-        z-index: 1000;
-    }
-
-    .navbar .navbar-logo {
-        left: 25px;
-    }
-
+@media (max-width: 601px) {
     .navbar .nav-links {
         display: block;
         position: fixed;
@@ -1075,25 +1114,50 @@ footer .copyright {
         border-radius: 999px;
     }
 
-    .navbar .nav-links.active .close-icon a {
+    .navbar .nav-links.active .close-icon i {
         display: flex;
         position: absolute;
-        top: 10px;
+        top: 20px;
+        left: 20px;
         font-size: 25px;
+        color: white;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links.active .close-icon:hover i {
+        color: #FFC700;
     }
 
     .navbar .menu-icon i {
         display: flex;
         color: white;
         cursor: pointer;
-        font-size: 22px;
+        font-size: 24px;
+        transition: all 0.3s ease;
     }
 
     .navbar .menu-icon i:hover {
-        background: #FFC700;
-        color: white;
-        font-weight: 700;
-        border-radius: 999px;
+        color: #FFC700;
+    }
+}
+
+
+/* iPhone X */
+
+@media (max-width: 376px) {
+    /* =========================
+        NAVBAR
+    ========================= */
+
+    .navbar {
+        padding: 0 30px;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .navbar .navbar-logo {
+        left: 25px;
     }
 
     /* =========================
