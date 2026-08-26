@@ -1078,10 +1078,10 @@ footer .copyright {
     }
 
     .navbar .nav-links a:hover {
-        display: flex;
-        position: absolute;
-        top: 10px;
-        font-size: 25px;
+        background: #FFC700;
+        color: white;
+        font-weight: 700;
+        border-radius: 999px;
     }
 
     .navbar .nav-links.active::before {
@@ -1108,8 +1108,8 @@ footer .copyright {
     }
 
     .navbar .nav-links.active a:hover {
-        background: #FFC700;
-        color: white;
+        background: #6E4EE6;
+        color: #FFC700;
         font-weight: 700;
         border-radius: 999px;
     }
