@@ -21,11 +21,14 @@ if (closeIcon) {
 }
 
 
-// Close mobile menu when a link is clicked
-navItems.forEach(link => {
-    link.addEventListener('click', () => {
+document.addEventListener('click', (event) => {
+    if (
+        navLinks.classList.contains('active') &&
+        !navLinks.contains(event.target) &&
+        !menuIcon.contains(event.target)
+    ) {
         navLinks.classList.remove('active');
-    });
+    }
 });
 
 // =========================
